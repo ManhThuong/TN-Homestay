@@ -90,8 +90,3 @@ ensureSampleRooms();
 ensureDefaultSettings();
 
 module.exports = db;
-const fs = require("fs");
-
-const DATA_DIR = path.join(__dirname, "data");
-if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-const adapter = new FileSync(path.join(DATA_DIR, "db.json"));
